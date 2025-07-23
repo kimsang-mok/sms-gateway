@@ -28,6 +28,14 @@ aws:
     configurationSetName: ${AWS_SMS_CONFIGURATION_SET_NAME}
     baseUrl: ${AWS_SMS_BASE_URL}
 
+twilio:
+  accountSid: ${TWILIO_ACCOUNT_SID}
+  authToken: ${TWILIO_AUTH_TOKEN}
+  sms:
+    baseUrl: ${TWILIO_SMS_BASE_URL}
+    fromNumber: ${TWILIO_SMS_FROM_NUMBER}
+
+
 
 logging:
   level:
