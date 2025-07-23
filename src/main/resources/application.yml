@@ -1,6 +1,8 @@
 spring:
   application:
     name: sms-gateway
+  profiles:
+    active: aws
 
 jsonplaceholder:
   base-url: https://jsonplaceholder.typicode.com
@@ -17,9 +19,19 @@ feign:
   okhttp:
     enabled: true
 
+aws:
+  accessKey: ${AWS_ACCESS_KEY}
+  secretKey: ${AWS_SECRET_ACCESS_KEY}
+  region: ${AWS_REGION}
+  sms:
+    originationIdentityPoolArn: ${AWS_SMS_ORIGINATION_IDENTITY_POOL_ARN}
+    configurationSetName: ${AWS_SMS_CONFIGURATION_SET_NAME}
+    baseUrl: ${AWS_SMS_BASE_URL}
+
+
 logging:
   level:
-    dev.miracode.sms.client: DEBUG
+    dev.miracode.sms.infrastructure.aws.client: DEBUG
     feign: DEBUG
 
 

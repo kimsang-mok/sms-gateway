@@ -30,6 +30,10 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
+    implementation 'software.amazon.awssdk:auth:2.31.78'
+    implementation 'software.amazon.awssdk:regions:2.31.78'
+    implementation("software.amazon.awssdk:pinpointsmsvoicev2:2.31.78")
+
     implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
     implementation 'org.glassfish:jakarta.el:4.0.2'
 
